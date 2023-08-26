@@ -1,148 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Font Links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Tailwind css link -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- custom style -->
-    <style>
-      body {
-        /* font-family: "Roboto", sans-serif; */
-        font-family: "Ubuntu", sans-serif;
-      }
-      .custom-btn::before {
-        content: "";
-        position: absolute;
-        top: 5px; /* Adjust the top position */
-        left: 5px; /* Adjust the left position */
-        right: -5px; /* Adjust the right position */
-        bottom: -5px; /* Adjust the bottom position */
-        border: 2px solid black;
-        z-index: -1; /* Place the border behind the button's content */
-        opacity: 1; /* Initially hide the pseudo-element */
-        transition: all 0.3s ease-in-out; /* Add a transition for smooth effect */
-      }
-      .custom-btn:hover::before {
-        border-color: #1e0581;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-    </style>
-    <title>Contact Page - Clone</title>
-  </head>
-  <body>
-    <!-- dev-shahin is working on header section -->
-    <header
-      style="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Font Links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind css link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- custom style -->
+  <style>
+    body {
+      /* font-family: "Roboto", sans-serif; */
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    .custom-btn::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      /* Adjust the top position */
+      left: 5px;
+      /* Adjust the left position */
+      right: -5px;
+      /* Adjust the right position */
+      bottom: -5px;
+      /* Adjust the bottom position */
+      border: 2px solid black;
+      z-index: -1;
+      /* Place the border behind the button's content */
+      opacity: 1;
+      /* Initially hide the pseudo-element */
+      transition: all 0.3s ease-in-out;
+      /* Add a transition for smooth effect */
+    }
+
+    .custom-btn:hover::before {
+      border-color: #1e0581;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+  <title>Contact Page - Clone</title>
+</head>
+
+<body>
+  <!-- dev-shahin is working on header section -->
+  <header style="
         background: linear-gradient();
         background-image: url(./images/about_page_bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-      "
-      class="w-full h-[70vh] overflow-hidden"
-    >
-      <!-- overlay & shapes -->
-      <div class="relative w-full h-[70vh] overflow-hidden">
-        <!-- Overlay color -->
-      <div
-      style="
+      " class="w-full h-[70vh] overflow-hidden">
+    <!-- overlay & shapes -->
+    <div class="relative w-full h-[70vh] overflow-hidden">
+      <!-- Overlay color -->
+      <div style="
         background: linear-gradient(to right, #1e0581, #8f06a7);
         opacity: 0.85;
-      "
-      class="relative w-full h-[70vh]"
-    ></div>
-    <!-- shape 1 -->
-    <img
-      class="absolute w-auto top-[0] right-[0] overflow-hidden"
-      src="images/hero_shape1.png"
-    />
-    <!-- shape 2 -->
-    <img
-      class="absolute w-auto top-[70px] left-[-350px] overflow-hidden"
-      src="images/hero_shape2.png"
-    />
-      </div>
+      " class="relative w-full h-[70vh]"></div>
+      <!-- shape 1 -->
+      <img class="absolute w-auto top-[0] right-[0] overflow-hidden" src="images/hero_shape1.png" />
+      <!-- shape 2 -->
+      <img class="absolute w-auto top-[70px] left-[-350px] overflow-hidden" src="images/hero_shape2.png" />
+    </div>
 
-      <nav style="top: 8vh; left: 50%; transform: translate(-50%, -50%)"
-        class="fixed w-[70vw] h-auto px-8 py-3 bg-white left-0">
-        <div class="flex justify-between items-center">
-          <!-- logo -->
-          <div>
-            <img class="w-[160px]" src="images/logo.png" />
-          </div>
+    <nav style="top: 8vh; left: 50%; transform: translate(-50%, -50%)"
+      class="fixed w-[70vw] h-auto px-8 py-3 bg-white left-0">
+      <div class="flex justify-between items-center">
+        <!-- logo -->
+        <div>
+          <img class="w-[160px]" src="images/logo.png" />
+        </div>
 
-          <!-- nav item -->
-          <ul class="hidden lg:flex justify-center items-center gap-5">
-            <li
-              class="cursor-pointer hover:text-[#FC097C] text-black font-medium"
-            >
-              Home
-            </li>
-            <li
-              class="cursor-pointer hover:text-[#FC097C] text-black font-medium"
-            >
-              About Us
-            </li>
-            <li
-              class="cursor-pointer hover:text-[#FC097C] text-black font-medium"
-            >
-              Page
-            </li>
-            <li
-              class="cursor-pointer hover:text-[#FC097C] text-black font-medium"
-            >
-              Blog
-            </li>
-            <li
-              class="cursor-pointer hover:text-[#FC097C] text-black font-medium"
-            >
-              Contact
-            </li>
-          </ul>
-          <!-- nav buttons -->
-          <div class="flex justify-center items-center gap-4">
-            <!-- search & cart icons -->
-            <div class="hidden lg:flex justify-center items-center space-x-2">
-              <img src="images/magnifying-glass.png" class="w-6" />
-              <div class="relative">
-                <img src="images/shopping-cart.png" class="w-6" />
-                <div
-                  class="absolute top-[-5px] right-[-5px] bg-[#FC097C] w-3 h-3 rounded-full text-white p-2 flex justify-center items-center">
-                  <p class="text-[10px]">0</p>
-                </div>
+        <!-- nav item -->
+        <ul class="hidden lg:flex justify-center items-center gap-5">
+          <li class="cursor-pointer hover:text-[#FC097C] text-black font-medium">
+            Home
+          </li>
+          <li class="cursor-pointer hover:text-[#FC097C] text-black font-medium">
+            About Us
+          </li>
+          <li class="cursor-pointer hover:text-[#FC097C] text-black font-medium">
+            Page
+          </li>
+          <li class="cursor-pointer hover:text-[#FC097C] text-black font-medium">
+            Blog
+          </li>
+          <li class="cursor-pointer hover:text-[#FC097C] text-black font-medium">
+            Contact
+          </li>
+        </ul>
+        <!-- nav buttons -->
+        <div class="flex justify-center items-center gap-4">
+          <!-- search & cart icons -->
+          <div class="hidden lg:flex justify-center items-center space-x-2">
+            <img src="images/magnifying-glass.png" class="w-6" />
+            <div class="relative">
+              <img src="images/shopping-cart.png" class="w-6" />
+              <div
+                class="absolute top-[-5px] right-[-5px] bg-[#FC097C] w-3 h-3 rounded-full text-white p-2 flex justify-center items-center">
+                <p class="text-[10px]">0</p>
               </div>
             </div>
-
-            <button
-              class="custom-btn relative bg-[#FC097C] text-center text-white px-5 py-3 font-bold cursor-pointer hover:bg-[#1e0581]">Buy Ticket Now</button>
           </div>
+
+          <button
+            class="custom-btn relative bg-[#FC097C] text-center text-white px-5 py-3 font-bold cursor-pointer hover:bg-[#1e0581]">Buy
+            Ticket Now</button>
         </div>
-      </nav>
-      
-      <!-- content -->
-      <div style="top: 70%;
+      </div>
+    </nav>
+
+    <!-- content -->
+    <div style="top: 70%;
       left: 50%;
       transform: translate(-50%, -50%);" class="absolute  text-center w-full h-[70vh]">
-        <h1 class="text-white text-5xl font-extrabold mb-3">Contact Us</h1>
-        <a href="#"  class="text-white hover:text-gray-500 cursor-pointer">Home</a>
-        <a href="#"  class="text-white cursor-pointer">/</a>
-        <a href="#"  class="text-white hover:text-gray-500 cursor-pointer">Contact Us</a>
+      <h1 class="text-white text-5xl font-extrabold mb-3">Contact Us</h1>
+      <a href="#" class="text-white hover:text-gray-500 cursor-pointer">Home</a>
+      <a href="#" class="text-white cursor-pointer">/</a>
+      <a href="#" class="text-white hover:text-gray-500 cursor-pointer">Contact Us</a>
+    </div>
+  </header>
+  <!-- dev Mafuzur Container start -->
+  <main>
+    <h1>This is the main Section</h1>
+  </main>
+
+
+  <!-- dev-tushar is working on footer start -->
+  <footer>
+    <div
+      class="footerWrap bg-[url('./images/footer_bg1.jpg'),linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))] bg-blend-overlay bg-no-repeat bg-cover h-[990px] w-full">
+      <div class="continers w-[1140px] mx-auto">
+        <div class="adsWrap pt-52">
+          <div
+            class="ads w-full h-[270px] bg-[url('./images/footer_contact_object.png'),linear-gradient(45deg,#1E0089,#9800AF)] rounded-lg flex justify-center items-center gap-8">
+            <div class="adsText text-white w-[450px]">
+              <p class="mb-4">Subscribe Newsletter</p>
+              <h2 class="text-4xl">Subscribe to recieve daily news</h2>
+            </div>
+            <div class="adsInput flex">
+              <input type="email" placeholder="email" class="bg-white border-none outline-none p-4 w-full" />
+              <button class="bg-[#fc097c] text-white hover:bg-[blue] transition p-4 px-10">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <div class="contactusWrap text-center mt-24">
+          <h1 class="text-white text-3xl mb-8">Contact With us</h1>
+          <div class="contactIconWrap flex gap-4 justify-center">
+            <a href="#"
+              class="w-[30px] h-[30px] flex justify-center items-center rounded-full p-8 bg-gray-400/70 text-white text-3xl">F</a>
+            <a href="#"
+              class="w-[30px] h-[30px] flex justify-center items-center rounded-full p-8 bg-gray-400/70 text-white text-3xl">T</a>
+            <a href="#"
+              class="w-[30px] h-[30px] flex justify-center items-center rounded-full p-8 bg-gray-400/70 text-white text-3xl">D</a>
+            <a href="#"
+              class="w-[30px] h-[30px] flex justify-center items-center rounded-full p-8 bg-gray-400/70 text-white text-3xl">Be</a>
+          </div>
+        </div>
+        <div class="footerLink flex justify-center gap-8 text-xl text-white mt-20">
+          <a href="#">Home</a>
+          <a href="#">blog</a>
+          <a href="#">contact</a>
+          <a href="#">about us</a>
+          <a href="#">sponsor</a>
+        </div>
+        <div class="border-b border-gray-500 mt-20"></div>
+        <p class="text-gray-500 text-center mt-10">2023 Copyright Expotin Designed by Love . All Rights Reserved</p>
       </div>
-    </header>
-    <!-- dev Mafuzur Container start -->
-    <main>
-      <h1>This is the main Section</h1>
-    </main>
-  </body>
+    </div>
+  </footer>
+  <!-- dev-tushar is working on footer end -->
+</body>
+
 </html>
